@@ -1,0 +1,39 @@
+@use '../constants/colors.scss' as colors;
+@use '../constants/fonts.scss' as fonts;
+@use '../constants/breakpoints.scss' as bp;
+
+.banner {
+  height: 50vh;
+  max-height: 40rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+
+  h2 {
+    position: relative;
+    z-index: 10;
+    font-size: 3.5rem;
+    color: white;
+    font-family: fonts.$primary;
+    font-style: italic;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 300;
+
+    @media (min-width: bp.$large) {
+      font-size: 4rem;
+    }
+  }
+
+  div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #2a3525, $alpha: 0.85);
+  }
+}

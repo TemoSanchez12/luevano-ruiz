@@ -1,0 +1,55 @@
+@use '../constants/colors.scss' as colors;
+@use '../constants/fonts.scss' as fonts;
+
+.activities {
+  padding: 12rem 0;
+
+  h2 {
+    font-size: 4rem;
+    font-family: fonts.$secondary;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    column-gap: 5rem;
+    row-gap: 10rem;
+    flex-wrap: wrap;
+    max-width: 122rem;
+    margin: 12rem auto 0;
+  }
+}
+
+.activities__item-list {
+  width: 26rem;
+  background-color: colors.$light-green;
+  padding: 18rem 1.3rem 1.3rem;
+  position: relative;
+  color: colors.$light-color;
+
+  img {
+    position: absolute;
+    top: -5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20rem;
+    height: 21rem;
+    object-fit: cover;
+  }
+
+  h3 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: fonts.$secondary;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.4rem;
+    font-family: fonts.$primary;
+    text-align: justify;
+    margin-top: 3rem;
+  }
+}

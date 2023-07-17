@@ -1,0 +1,13 @@
+@use '../constants/fonts.scss' as fonts;
+
+@mixin minimal_button() {
+  font-family: fonts.$secondary;
+  font-size: 2rem;
+  padding: 0.5rem 4rem;
+  color: white;
+  border-radius: 100vh;
+  border: 1px solid white;
+  text-align: center;
+  width: fit-content;
+  display: block;
+}

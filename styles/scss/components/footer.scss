@@ -1,0 +1,110 @@
+@use '../constants/fonts.scss' as fonts;
+@use '../constants/breakpoints.scss' as bp;
+
+.footer {
+  margin-top: 10rem;
+
+  @media (min-width: bp.$base) {
+    margin-top: 15rem;
+  }
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+
+  @media (min-width: bp.$base) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: start;
+    width: min(95%, 120rem);
+    margin: 0 auto;
+  }
+}
+
+.footer__site-navigation {
+  @media (min-width: bp.$base) {
+    order: 2;
+  }
+
+  nav {
+    ul {
+      li {
+        text-align: center;
+        margin-bottom: 0.5rem;
+
+        @media (min-width: bp.$base) {
+          text-align: left;
+        }
+
+        a {
+          font-size: 1.5rem;
+          font-family: fonts.$primary;
+          font-weight: 300;
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+.footer__contact-info {
+  margin-bottom: 4rem;
+
+  ul {
+    li {
+      text-align: center;
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+      font-family: fonts.$primary;
+      font-weight: 300;
+      color: black;
+
+      @media (min-width: bp.$base) {
+        text-align: left;
+      }
+    }
+  }
+}
+
+.footer__social-media {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+
+  @media (min-width: bp.$base) {
+    justify-content: start;
+  }
+
+  p {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    font-family: fonts.$primary;
+    font-weight: 300;
+    color: black;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 1rem;
+
+    li a img {
+      width: 2rem;
+    }
+  }
+}
+
+.footer__logo-container {
+  @media (min-width: bp.$base) {
+    order: 3;
+  }
+
+  width: 25rem;
+  margin-bottom: 2rem;
+  img {
+    width: 100%;
+  }
+}

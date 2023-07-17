@@ -1,0 +1,30 @@
+@use './components/hero.scss';
+@use './components/navbar.scss';
+@use './components/presentation.scss';
+@use './components/art-wine.scss';
+@use './components/our-labels.scss';
+@use './components/banner.scss';
+@use './components/wine-experience.scss';
+@use './components/footer.scss';
+@use './components/vendimia.scss';
+@use './components/activities.scss';
+@use './components/schedule.scss';
+@use './components/packages.scss';
+@use './components/event-areas.scss';
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  list-style: none;
+  text-decoration: none;
+
+  /* 1rem = 10px */
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+}

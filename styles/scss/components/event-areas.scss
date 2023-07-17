@@ -1,0 +1,30 @@
+@use '../constants/colors.scss' as colors;
+@use '../constants/fonts.scss' as fonts;
+@use '../constants/breakpoints.scss' as bp;
+
+.event-areas {
+  width: min(95, 110rem);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 0 10rem;
+
+  @media (min-width: bp.$large) {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  h4 {
+    font-family: fonts.$secondary;
+    font-size: 3rem;
+    font-weight: 300;
+    text-align: center;
+    max-width: 40rem;
+    margin-bottom: 4rem;
+  }
+
+  img {
+    width: min(100%, 50rem);
+  }
+}

@@ -1,0 +1,39 @@
+@use '../constants/colors.scss' as colors;
+@use '../constants/fonts.scss' as fonts;
+@use '../mixins/buttons.scss' as buttons;
+
+.packages {
+  padding: 8rem 0;
+
+  h2 {
+    font-family: fonts.$secondary;
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 300;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7rem;
+    justify-content: center;
+    margin-top: 8rem;
+  }
+}
+
+.packages__item-list {
+  div img {
+    width: 100%;
+    height: 50rem;
+    object-fit: contain;
+    object-position: top;
+  }
+
+  a {
+    @include buttons.minimal_button();
+    margin: 2rem auto;
+    border-color: colors.$dark-red;
+    color: white;
+    background-color: colors.$dark-red;
+  }
+}

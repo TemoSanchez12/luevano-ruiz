@@ -1,0 +1,80 @@
+@use '../constants/colors.scss' as colors;
+@use '../constants/fonts.scss' as fonts;
+@use '../constants/breakpoints.scss' as bp;
+
+@use '../mixins/buttons.scss' as buttons;
+
+.art-wine {
+  background-color: colors.$light-green;
+  padding: 5rem 2rem;
+}
+.art-wine__container {
+  width: min(100%, 130rem);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  gap: 8rem;
+
+  @media (min-width: bp.$large) {
+    grid-template-columns: 1fr 1fr;
+    margin: 5rem auto;
+  }
+}
+
+.art-wine__info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(90%, 50rem);
+  margin: 0 auto;
+
+  @media (min-width: bp.$large) {
+    grid-column: 2;
+  }
+}
+
+.art-wine__title {
+  font-family: fonts.$secondary;
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 300;
+}
+
+.art-wine__text-container {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  text-align: justify;
+  margin: 4rem auto 0 !important;
+
+  p {
+    color: white;
+    font-family: fonts.$primary;
+    font-size: 1.6rem;
+    font-weight: 300;
+  }
+}
+
+.art-wine__about-button {
+  margin: 3rem auto 5rem;
+  text-decoration: none;
+  @include buttons.minimal_button();
+
+  @media (min-width: bp.$large) {
+    margin: 8rem auto 0;
+  }
+}
+
+.art-wine__image {
+  width: min(100%, 50rem);
+  margin: 0 auto;
+  object-fit: cover;
+
+  @media (min-width: bp.$large) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}

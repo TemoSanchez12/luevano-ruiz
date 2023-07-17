@@ -1,0 +1,44 @@
+@use '../constants/colors.scss' as colors;
+@use '../constants/fonts' as fonts;
+
+.schedule {
+  width: min(95%, 50rem);
+  margin: 0 auto;
+  padding-bottom: 5rem;
+
+  h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    background-color: colors.$light-green;
+    color: colors.$light-color;
+    font-weight: 300;
+    padding: 3rem 5rem;
+  }
+
+  ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    gap: 1rem;
+    position: relative;
+
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      opacity: 0.3;
+    }
+
+    li {
+      position: relative;
+      z-index: 10;
+      font-size: 2rem;
+      font-family: fonts.$primary;
+      color: colors.$light-green;
+    }
+  }
+}

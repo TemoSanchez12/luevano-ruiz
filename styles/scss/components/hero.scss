@@ -1,0 +1,40 @@
+@use '../constants/colors' as colors;
+@use '../constants/fonts.scss' as fonts;
+@use '../constants/breakpoints.scss' as bp;
+
+.header-home {
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70vh;
+  position: relative;
+}
+
+.header-home__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 70%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+
+.hero-home__text {
+  position: relative;
+  z-index: 10;
+  font-size: 5rem;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: fonts.$primary;
+  margin: 10rem auto 0;
+  width: min(90%, 70rem);
+
+  @media (min-width: bp.$base) {
+    margin-top: 32vh;
+    font-size: 5.3rem;
+  }
+}
