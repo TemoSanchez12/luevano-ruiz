@@ -1,0 +1,28 @@
+@use '../constants/colors.scss' as colors;
+@use '../constants/fonts.scss' as fonts;
+@use '../constants/breakpoints.scss' as bp;
+
+.about-us-hero {
+  margin-top: 7rem;
+
+  h1 {
+    font-family: fonts.$secondary;
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 300;
+  }
+
+  p {
+    font-family: fonts.$primary;
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: 300;
+    margin: 2rem auto 4rem;
+  }
+
+  img {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+  }
+}

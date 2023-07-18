@@ -1,0 +1,40 @@
+@use '../constants/colors.scss' as colors;
+@use '../constants/fonts.scss' as fonts;
+@use '../constants/breakpoints.scss' as bp;
+
+.our-goal {
+  @media (min-width: bp.$large) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 2rem;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  img {
+    width: min(100%, 50rem);
+    margin: 3rem auto 0;
+    display: block;
+  }
+}
+
+.our-goal__text {
+  h2 {
+    font-family: fonts.$secondary;
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 300;
+    color: colors.$dark-green;
+  }
+
+  div p {
+    font-family: fonts.$primary;
+    font-size: 1.6rem;
+    text-align: justify;
+    font-weight: 300;
+    margin: 2rem auto 4rem;
+    width: min(95%, 60rem);
+  }
+}

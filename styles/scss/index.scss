@@ -11,6 +11,9 @@
 @use './components/schedule.scss';
 @use './components/packages.scss';
 @use './components/event-areas.scss';
+@use './components/about-us-hero.scss';
+@use './components/our-history.scss';
+@use './components/our-goal.scss';
 
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
