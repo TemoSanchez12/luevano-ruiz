@@ -24,5 +24,9 @@
     width: 100%;
     height: 30vh;
     object-fit: cover;
+
+    @media (min-width: bp.$large) {
+      height: 50vh;
+    }
   }
 }

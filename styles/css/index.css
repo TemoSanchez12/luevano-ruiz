@@ -815,6 +815,11 @@
   height: 30vh;
   object-fit: cover;
 }
+@media (min-width: 992px) {
+  .about-us-hero img {
+    height: 50vh;
+  }
+}
 
 .our-history {
   position: relative;
