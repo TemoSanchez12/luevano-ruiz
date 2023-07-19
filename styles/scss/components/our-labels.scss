@@ -1,5 +1,6 @@
 @use '../constants/fonts.scss' as fonts;
 @use '../constants/colors.scss' as colors;
+@use '../constants/breakpoints.scss' as bp;
 
 .our-labels {
   margin-top: 6rem;
@@ -10,6 +11,36 @@
     text-align: center;
     text-transform: uppercase;
     font-weight: 400;
+  }
+}
+
+.our-labels__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: bp.$large) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.our-labels__text {
+  width: min(90%, 40rem);
+  margin: 0 auto;
+
+  p {
+    text-align: justify;
+    font-family: fonts.$primary;
+    font-size: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  img {
+    width: 100%;
+    margin: 0 auto;
+    object-fit: contain;
+    height: 30rem;
   }
 }
 
@@ -25,9 +56,15 @@
 }
 
 .our-labels__slide-container {
-  width: min(90%, 40rem);
+  width: min(90%, 80rem);
   margin: 0 auto;
   position: relative;
+
+  @media (min-width: bp.$base) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
 }
 
 .our-labels__slide {
@@ -72,7 +109,7 @@
   display: flex;
   gap: 2rem;
   justify-content: center;
-  margin-top: 1rem;
+  padding-top: 2rem;
 
   span {
     font-family: fonts.$primary;

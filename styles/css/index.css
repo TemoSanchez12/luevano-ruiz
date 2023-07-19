@@ -264,6 +264,35 @@
   font-weight: 400;
 }
 
+.our-labels__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  .our-labels__container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.our-labels__text {
+  width: min(90%, 40rem);
+  margin: 0 auto;
+}
+.our-labels__text p {
+  text-align: justify;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  margin: 2rem 0;
+}
+.our-labels__text img {
+  width: 100%;
+  margin: 0 auto;
+  object-fit: contain;
+  height: 30rem;
+}
+
 .carousel-item-wine {
   display: flex;
   flex-direction: column;
@@ -276,9 +305,16 @@
 }
 
 .our-labels__slide-container {
-  width: min(90%, 40rem);
+  width: min(90%, 80rem);
   margin: 0 auto;
   position: relative;
+}
+@media (min-width: 768px) {
+  .our-labels__slide-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
 }
 
 .our-labels__slide {
@@ -321,7 +357,7 @@
   display: flex;
   gap: 2rem;
   justify-content: center;
-  margin-top: 1rem;
+  padding-top: 2rem;
 }
 .our-labels__slide-details span {
   font-family: "Montserrat", sans-serif;
