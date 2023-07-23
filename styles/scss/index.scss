@@ -1,3 +1,4 @@
+@use './constants/fonts.scss' as fonts;
 @use './components/hero.scss';
 @use './components/navbar.scss';
 @use './components/presentation.scss';
@@ -15,6 +16,7 @@
 @use './components/our-history.scss';
 @use './components/our-goal.scss';
 @use './components/paraphrase.scss';
+@use './components/map.scss';
 
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
@@ -31,4 +33,5 @@ html {
   font-size: 62.5%;
   margin: 0;
   padding: 0;
+  font-family: fonts.$primary;
 }

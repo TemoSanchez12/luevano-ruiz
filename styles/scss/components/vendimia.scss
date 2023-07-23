@@ -24,6 +24,10 @@
   padding-top: 5rem;
   width: 95%;
   margin: 0 auto;
+  @media (min-width: bp.$large) {
+    width: 50%;
+    margin-right: 10rem;
+  }
 }
 
 .hero-vendimia__title-container {
@@ -70,8 +74,16 @@
   max-height: 40rem;
 
   @media (min-width: bp.$large) {
-    max-height: 100rem;
+    position: absolute;
+    left: 0;
+    top: 11rem;
     height: 100%;
+    max-height: 55rem;
+    max-width: 30rem;
+  }
+
+  @media (min-width: 1100px) {
+    max-width: none;
   }
 
   img {
@@ -79,9 +91,5 @@
     object-position: top;
     height: 100%;
     width: 100%;
-
-    @media (min-width: bp.$large) {
-      width: 50rem;
-    }
   }
 }

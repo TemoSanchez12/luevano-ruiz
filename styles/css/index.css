@@ -11,7 +11,7 @@
   width: 100%;
   height: 100%;
   background: rgb(0, 0, 0);
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.5) 100%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
 }
 
 .hero-home__text {
@@ -30,6 +30,16 @@
     margin-top: 32vh;
     font-size: 5.3rem;
   }
+}
+
+.header-home__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -10;
 }
 
 .header {
@@ -314,6 +324,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    margin-left: 0;
   }
 }
 
@@ -347,7 +358,7 @@
   margin: 0 auto;
 }
 .our-labels__slide-image-container img {
-  width: 100%;
+  width: 140%;
   margin: 0 auto;
   object-fit: contain;
   height: 30rem;
@@ -612,6 +623,12 @@
   width: 95%;
   margin: 0 auto;
 }
+@media (min-width: 992px) {
+  .hero-vendimia__info-container {
+    width: 50%;
+    margin-right: 10rem;
+  }
+}
 
 .hero-vendimia__title-container img {
   width: min(100%, 67rem);
@@ -663,8 +680,17 @@
 }
 @media (min-width: 992px) {
   .hero-vendimia__image-container {
-    max-height: 100rem;
+    position: absolute;
+    left: 0;
+    top: 11rem;
     height: 100%;
+    max-height: 55rem;
+    max-width: 30rem;
+  }
+}
+@media (min-width: 1100px) {
+  .hero-vendimia__image-container {
+    max-width: none;
   }
 }
 .hero-vendimia__image-container img {
@@ -672,11 +698,6 @@
   object-position: top;
   height: 100%;
   width: 100%;
-}
-@media (min-width: 992px) {
-  .hero-vendimia__image-container img {
-    width: 50rem;
-  }
 }
 
 .activities {
@@ -704,6 +725,7 @@
   padding: 18rem 1.3rem 1.3rem;
   position: relative;
   color: #f5f5ec;
+  height: 100%;
 }
 .activities__item-list img {
   position: absolute;
@@ -745,10 +767,10 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin-top: 3rem;
   gap: 1rem;
   position: relative;
+  padding-left: 20%;
 }
 .schedule ul img {
   position: absolute;
@@ -1017,6 +1039,22 @@
   font-style: italic;
 }
 
+#map {
+  height: 40rem;
+}
+
+.leaflet-popup-content {
+  font-size: 1.3rem !important;
+}
+
+.map p {
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  max-width: 60rem;
+  margin: 3rem auto;
+}
+
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
   box-sizing: border-box;
@@ -1032,6 +1070,7 @@ html {
   font-size: 62.5%;
   margin: 0;
   padding: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 /*# sourceMappingURL=index.css.map */
